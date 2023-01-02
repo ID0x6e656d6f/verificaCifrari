@@ -5,7 +5,7 @@ public class facade {
     public static int port = 64258;
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Server loading");
+        System.out.println("Server loading...");
         ArrayList<ClientHandler> handlers = new ArrayList<ClientHandler>();
         try (ServerSocket sSocket = new ServerSocket(port)) {
             System.out.format("Server started: %s, waiting at %s\n", sSocket.getInetAddress().getHostAddress(),

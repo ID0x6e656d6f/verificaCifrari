@@ -40,10 +40,8 @@ public class ClientHandler extends Thread {
                         Boolean isCif = protocolParts[4] == "T" ? true : false; // cifer or decifer
 
                         if (cipher.equals("c")) {
-                            System.out.println("cesare");
                             cesar(text, key, isCif);
                         } else {
-                            System.out.println("vigenere");
                             vignere(text, key, isCif);
                         }
                     }
@@ -67,12 +65,12 @@ public class ClientHandler extends Thread {
 
     private void cesar(String message, String Key, Boolean isCif) {
         // operation, it's an alpha version so...it's okay so
-        answer(message);
+        answer((message + "-" + Key + "--with cesar"));
 
     }
 
     private void vignere(String message, String Key, Boolean isCif) {
         // operation, it's an alpha version so...it's okay so
-        answer(message);
+        answer(message + "-" + Key + "with vignere");
     }
 }
